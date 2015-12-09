@@ -5,7 +5,8 @@
 [![Code Climate](https://codeclimate.com/github/guyellis/http-status-check/badges/gpa.svg)](https://codeclimate.com/github/guyellis/http-status-check)
 [![Dependency Status](https://david-dm.org/guyellis/http-status-check.png)](https://david-dm.org/guyellis/http-status-check)
 
-Checks your sites' HTTP statuses
+Checks your sites' HTTP st
+atuses
 
 ## Install
 
@@ -44,7 +45,7 @@ The objectives of the http-status-check project are as follows:
 Running `node index.js` should give you an indication
  of how it works. It uses the `samplesites.js` file for
  the names of the sites to test.
- 
+
 Copy `samplesites.js` to `checksites.js`. If `checksites.js`
 is found then it takes precedence over `samplesites.js`.
 
@@ -59,17 +60,17 @@ The `samplesites.js` file is heavily commented and a good starting point.
   * `name` - any name that you want to give this site. This will be logged to the console with the status.
   * `expectedStatus` - the status that you expected this site to return, e.g. 200 or 301
   * `requestUrl` - URL or array of URLs to of the site(s) to check
-  * `responseHeaders` - an object with a collection of response headers expected back from the site. Each of these is compared to the actual response headers received. 
-  * `requestHeaders` - an object with a collection of request headers to send with the request. 
-  * `disabled` - defaults to false. Set to true if you don't want this site to be checked. Useful if you don't want to delete the details from the checksites.js config file but also don't want it run. Will appear in reports as "not run." 
+  * `responseHeaders` - an object with a collection of response headers expected back from the site. Each of these is compared to the actual response headers received.
+  * `requestHeaders` - an object with a collection of request headers to send with the request.
+  * `disabled` - defaults to false. Set to true if you don't want this site to be checked. Useful if you don't want to delete the details from the checksites.js config file but also don't want it run. Will appear in reports as "not run."
   * `excludedHeaders` - An array of headers that you expect not to be returned by the server. (For example, for security you may not want the X-Powered-By header to be returned.) If any of these headers are present then the check will be considered a failure and reported as such.
   * `followRedirect` - If a URL returns redirect status (300 to 399) then continue to follow any redirects and don't check until an non-300 series status is returned. See samplesites.js for use case and further details.
-  * `expectedText` - A string or an array of strings or an array of objects. If an array of objects then each object should have a string 'text' property and an optional boolean caseSensitive property 
+  * `expectedText` - A string or an array of strings or an array of objects. If an array of objects then each object should have a string 'text' property and an optional boolean caseSensitive property
     * `text` - The text to find on the page
     * `caseSensitive` - true/false to indicate if the comparison should be case sensitive. Defaults to false if missing and if expectedText is a string or array of strings.
 * `concurrentRequests` - The number of sites to check at the same time. Defaults to 3 if this is missing
 * `allSites` - Data that will be applied to each of the site objects above if it is missing from the site object. i.e. the data in the site object will take precedence over this data.
-  
+
 ## Enhancements and Bugs
 
 Add requests for enhancements and bugs to: [HTTP Status Check Issues](https://github.com/guyellis/http-status-check/issues)
@@ -80,7 +81,7 @@ You are encouraged to fork this repository, edit the code, and submit a pull req
  Even if you have never done this before and it seems scary. Especially if you have never done this before. One of the
  objectives of this project is to provide a safe and encouraging project where new comers can learn about the mechanics
  of open source, GitHub source control and coding in JavaScript.
- 
+
 If you are completely new then the best place to start is to start by seeing if you can add a unit test to the project.
 A test will improve the quality and health of the project and not break anything that anyone is using. You can also
 add comments and debug() statements to existing tests as you read understand and learn the code. There's also nothing
